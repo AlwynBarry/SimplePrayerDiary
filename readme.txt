@@ -2,16 +2,16 @@
 Contributors: Alwyn Barry, from code by mpol
 Tags: simple prayer diary, prayer diary, prayer, prayer item
 Requires at least: 4.1
-Tested up to: 6.1
+Tested up to: 6.1.1
 Stable tag: 1.4.2
 License: GPLv2 or later
 
-Simple Prayer Diary is a dated prayer reminder list for people who just want something simple.
+Simple Prayer Diary is a dated prayer reminder list for Wordpress people who just want something simple to use.
 
 == Description ==
 
-Simple Prayer Diary is a dated prayer reminder list for people who just want something simple.
-The goal is to provide a simple way to show a list of items to pray for by date to your visitors.
+Simple Prayer Diary is a dated prayer reminder list for people who just want something simple to use.
+The goal is to provide a simple way to show a list of items to pray for by upcoming date to your visitors.
 
 
 Current features include:
@@ -26,11 +26,6 @@ Current features include:
 
 If you have a problem or a feature request, please send a message to the author.
 
-= Translations =
-
-Translations can be added very easily through [GlotPress](https://translate.wordpress.org/projects/wp-plugins/super-simple-event-calendar).
-You can start translating strings there for your locale. They need to be validated though, so if there's no validator yet, and you want to apply for being validator (PTE), please post it on the support forum.
-I will make a request on make/polyglots to have you added as validator for this plugin/locale.
 
 = Demo =
 
@@ -39,7 +34,7 @@ Currently there is no demo site
 
 = Contributions =
 
-This plugin is really only marginally changed from the Super Simple Event Calendar of M. Pol
+This plugin is really only marginally changed and expanded from the Super Simple Event Calendar of M. Pol
 
 
 == Installation ==
@@ -49,20 +44,22 @@ This plugin is really only marginally changed from the Super Simple Event Calend
 * Install the plugin through the admin page "Plugins".
 * Alternatively, unpack and upload the contents of the zipfile to your '/wp-content/plugins/' directory.
 * Activate the plugin through the 'Plugins' menu in WordPress.
-* Place the shortcode '[simple_prayer_diary]' in a page.
-* Add Events through the admin menu.
+* Place the shortcode '[simple_prayer_diary]' or '[simple_prayer_month_diary]' in a page.
+* Add new Prayer Items through the Quick Add in the admin menu.
 
-= How to add events and format them =
+= How to add Prayer Items and format them =
 
-Although the item itself is dated, that date is to do with when it is no longer visibile.
-So, to date the prayer item use the title field to add the month and day (this will soon be done for you automatically).
+The prayer item is dated using the date in the Quick Add meta box.  This is used for the title field and the publish date for the Prayer Item.
 Use the content field for the prayer reminder details. You can make this as complex or as simple as you wish.
-In the publishing box set the date to the end date and end time of the prayer item - the diary only lists future
-prayer items, with all past prayer items hidden.
+You can optionally add a category for each Prayer Item (managed through the Categories entry in the Prayer Items Admin menu).
+
+IMPORTANT: If you are re-using or editing an old prayer item, you will have to keep the Title and Publish Date in sync - this is
+only set automatically when you use the Quick Edit entry form when initially creating the Prayer Item.  In the Title and Publishing
+date set the date to the end date and end time of the prayer item.
 
 = License =
 
-The plugin itself is released under the GNU General Public License. A copy of this license can be found at the license homepage or in the super-simple-event-calendar.php file at the top.
+The plugin itself is released under the GNU General Public License. A copy of this license can be found at the license homepage or in the simple-prayer-diary.php file at the top.
 
 
 == Frequently Asked Questions ==
@@ -75,9 +72,13 @@ You can use a shortcode parameter for showing events only from certain categorie
 
 = I want to limit the number of events in the shortcode. =
 
-You can use a shortcode parameter for showing events a limited number of events:
+You can use a shortcode parameter for showing a limited number of prayer items after today's date:
 
-	[simple_prayer_diary posts_per_page="3"]
+	[simple_prayer_diary posts_per_page="5"]
+
+I want to show a whole month of prayer items:
+
+	[simple_prayer_month_diary]
 
 == Screenshots ==
 
@@ -87,8 +88,14 @@ None as yet
 == Changelog ==
 
 = 1.4.2 =
+* 2022-11-21
+* Added a whole month view short code, and provided responsive CSS for the month table.
+* Simplified the Quick Edit so that the title is automatically the date, and the publish date is set automatically from the date too
+
 * 2022-11-03
 * Modifications throughout to change it from an events calendar to a prayer diary
+* Changed the layout from table-based to DIV based, with appropriate CSS to format it
+
 
 = All below are from super-simple-events-calendar =
 
