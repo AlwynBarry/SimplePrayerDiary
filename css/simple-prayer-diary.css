@@ -1,0 +1,107 @@
+div.spd-shortcode-prayer-diary {
+}
+
+div.spd-shortcode-prayer-diary div.spd-category {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.8rem;
+}
+
+div.spd-shortcode-prayer-diary div.spd-category:first-child {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+div.spd-shortcode-prayer-diary div.spd-category:first-child div.spd-content {
+  background-color: #FFFEE3;
+  width: 100%;
+}
+
+div.spd-shortcode-prayer-diary div.spd-category:last-child {
+  margin-bottom: 0;
+}
+
+div.spd-shortcode-prayer-diary div.spd-category div.spd-title {
+  padding: 1rem;
+  background-color: #3A76CA;
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: bold;
+  min-width: 6rem;
+}
+
+div.spd-shortcode-prayer-diary div.spd-category div.spd-content {
+  padding: 1rem;
+}
+
+div.spd-shortcode-prayer-diary div.spd-category div.spd-content a.post-edit-link {
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+}
+
+div.spd-shortcode-month-header {
+  font-size: 3rem;
+  text-align: center;
+}
+
+td.spd-day-header {
+  width: 14.3%;
+  font-weight: bold;
+  text-align: center;
+  background-color: #3A76CA;
+  color: #FFFFFF;
+}
+
+td.spd-no-day {
+  background-color: #efefef;
+}
+
+td.spd-day {
+  vertical-align: top;
+}
+
+td.spd-day,
+td.spd-day p {
+  font-size: 0.7rem;
+}
+
+td.spd-day div.spd-day-cell {
+  min-height: 5rem;
+}
+
+td.spd-day div.spd-day-date {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 650px) {  
+  .spd-responsive-table thead {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+  }
+  
+  .spd-responsive-table tr {
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  .spd-responsive-table td {
+    border: 1px solid;
+    border-bottom: none;
+    display: block;
+    font-size: .8em;
+    text-align: left;
+  }
+  
+  .spd-responsive-table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .spd-responsive-table td:last-child {
+    border-bottom: 1px solid;
+  }
+}
+
+
