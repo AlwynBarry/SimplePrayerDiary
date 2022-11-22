@@ -3,9 +3,9 @@
 Plugin Name: Simple Prayer Diary
 Plugin URI: https://wordpress.org/plugins/simple-prayer-diary/
 Description: Simple Prayer Diary is an prayer diary for people who just want a simple dated list of prayer items.
-Version: 1.4.2
+Version: 1.0.0 (from v1.4.2 of Super Simple Event Calendar)
 Author: Alwyn Barry from Super Simple Event Calendar by Marcel Pol
-Author URI: 
+Author URI: https://github.com/AlwynBarry/SimplePrayerDiary
 License: GPLv2 or later
 Text Domain: simple-prayer-diary
 Domain Path: /lang/
