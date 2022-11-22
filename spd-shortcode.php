@@ -127,29 +127,29 @@ function days_in_month($month, $year)
  */
 function spd_month_shortcode( $atts ) {
 
-	$shortcode_atts = shortcode_atts( array( 'month' => 0 ), $atts );
-	$month = (int) $shortcode_atts['month'];
+  $shortcode_atts = shortcode_atts( array( 'month' => 0 ), $atts );
+  $month = (int) $shortcode_atts['month'];
   $date = current_time( 'timestamp' );
   $year = (int) date_i18n( 'Y', $date );
-	if ( $month === 0 ) {
-		$month = date_i18n( 'n', $date );
-	} else {
-		if ( $month < 1 ) {
+  if ( $month === 0 ) {
+    $month = date_i18n( 'n', $date );
+  } else {
+    if ( $month < 1 ) {
       $month = 1;
     } else {
       if ( $month > 12) {
         $month = 12;
       }
     }
-	}
+  }
 
-	$tax_query = array();
-	if ( ! empty( $atts['category'] ) ) {
-		$cat_in = explode( ',', $atts['category'] );
-		$cat_in = array_map( 'absint', array_unique( (array) $cat_in ) );
-		if ( ! empty( $cat_in ) ) {
-			$tax_query['relation'] = 'OR';
-			$tax_query[] = array(
+  $tax_query = array();
+  if ( ! empty( $atts['category'] ) ) {
+    $cat_in = explode( ',', $atts['category'] );
+    $cat_in = array_map( 'absint', array_unique( (array) $cat_in ) );
+    if ( ! empty( $cat_in ) ) {
+      $tax_query['relation'] = 'OR';
+      $tax_query[] = array(
 				'taxonomy'         => 'spd_category',
 				'terms'            => $cat_in,
 				'field'            => 'term_id',
@@ -208,7 +208,8 @@ function spd_month_shortcode( $atts ) {
 
     /* Find the number of days in this month, and the offset into the month of the first day */
     $numberOfDays = days_in_month( $month, $year );
-    $offset = date("w", $date);
+    $firstDate = new DateTime($year . '-' . $month . '-01');
+    $offset = $firstDate->format('w');
     $row_number = 1;
 
     /* Output the extra days at the start of the month */
