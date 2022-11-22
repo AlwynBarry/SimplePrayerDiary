@@ -3,14 +3,14 @@ Contributors: Alwyn Barry, from code by mpol
 Tags: simple prayer diary, prayer diary, prayer, prayer item
 Requires at least: 4.1
 Tested up to: 6.1.1
-Stable tag: 1.4.2
+Stable tag: 1.0.0
 License: GPLv2 or later
 
-Simple Prayer Diary is a dated prayer reminder list for Wordpress people who just want something simple to use.
+Simple Prayer Diary is a dated prayer reminder list for Wordpress, for people who just want something simple to use.
 
 == Description ==
 
-Simple Prayer Diary is a dated prayer reminder list for people who just want something simple to use.
+Simple Prayer Diary is a dated prayer reminder list for people who just want something simple to use in Wordpress.
 The goal is to provide a simple way to show a list of items to pray for by upcoming date to your visitors.
 
 
@@ -87,7 +87,7 @@ None as yet
 
 == Changelog ==
 
-= 1.4.2 =
+= 1.0.0 =
 * 2022-11-21
 * Added a whole month view short code, and provided responsive CSS for the month table.
 * Simplified the Quick Edit so that the title is automatically the date, and the publish date is set automatically from the date too
