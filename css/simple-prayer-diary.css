@@ -1,25 +1,30 @@
 div.spd-shortcode-prayer-diary {
 }
 
+div.spd-shortcode-prayer-diary > div,
 div.spd-shortcode-prayer-diary div.spd-category {
   display: flex;
   flex-direction: row;
   margin-bottom: 0.8rem;
 }
 
+div.spd-shortcode-prayer-diary > div:first-child,
 div.spd-shortcode-prayer-diary div.spd-category:first-child {
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 }
 
+div.spd-shortcode-prayer-diary > div:first-child div.spd-content,
 div.spd-shortcode-prayer-diary div.spd-category:first-child div.spd-content {
   background-color: #FFFEE3;
   width: 100%;
 }
 
+div.spd-shortcode-prayer-diary > div:last-child,
 div.spd-shortcode-prayer-diary div.spd-category:last-child {
   margin-bottom: 0;
 }
 
+div.spd-shortcode-prayer-diary > div div.spd-title,
 div.spd-shortcode-prayer-diary div.spd-category div.spd-title {
   padding: 1rem;
   background-color: #3A76CA;
@@ -29,10 +34,12 @@ div.spd-shortcode-prayer-diary div.spd-category div.spd-title {
   min-width: 6rem;
 }
 
+div.spd-shortcode-prayer-diary > div div.spd-content,
 div.spd-shortcode-prayer-diary div.spd-category div.spd-content {
   padding: 1rem;
 }
 
+div.spd-shortcode-prayer-diary > div div.spd-content a.post-edit-link,
 div.spd-shortcode-prayer-diary div.spd-category div.spd-content a.post-edit-link {
   font-size: 0.7rem;
   margin-left: 0.5rem;
