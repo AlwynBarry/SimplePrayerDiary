@@ -83,8 +83,8 @@ function spd_get_term_classes( $postid ) {
 		foreach ( $categories as $category ) {
 			if ( isset( $category->term_id ) ) {
 				$class = sanitize_html_class( $category->slug, $category->term_id );
-				$classes[] = 'sdp-category-' . $class;
-				$classes[] = 'sdp-category-' . $category->term_id;
+				$classes[] = 'spd-category-' . $class;
+				$classes[] = 'spd-category-' . $category->term_id;
 			}
 		}
 	}
